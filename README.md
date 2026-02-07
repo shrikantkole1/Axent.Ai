@@ -6,6 +6,10 @@
 
 Axent AI is an advanced, AI-powered study planning application designed specifically for engineering students to master their curriculum through adaptive schedules, personalized roadmaps, and intelligent tutoring.
 
+<div align="center">
+🔗 <strong>Live Demo:</strong> https://axent-ai.vercel.app/
+</div>
+
 View your app in AI Studio: https://ai.studio/apps/drive/17XuP-QIYV48R6Nlobs15oKLOkXgBO7jH
 
 ---
