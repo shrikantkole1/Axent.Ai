@@ -1,0 +1,7 @@
+{
+  "name": "Axent AI Planner",
+  "description": "The high-performance AI study planner for engineering students. Adaptive logic for cognitive load, priorities, and deadlines.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
