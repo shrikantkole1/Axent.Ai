@@ -129,14 +129,23 @@ export const Auth: React.FC = () => {
           </div>
 
           {/* Database Status Indicator */}
-          <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-6 ${dbStatus === 'connected' ? 'bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400' :
-            dbStatus === 'disconnected' ? 'bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400' :
-              'bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400'
-            }`}>
-            {dbStatus === 'connected' && <CheckCircle2 size={14} />}
-            {dbStatus === 'disconnected' && <AlertCircle size={14} />}
-            {dbStatus === 'checking' && <Loader2 size={14} className="animate-spin" />}
-            Database {dbStatus === 'connected' ? 'Connected' : dbStatus === 'disconnected' ? 'Offline' : 'Checking...'}
+          {/* Database Status Indicator */}
+          <div className="flex flex-col gap-1 mb-6">
+            <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold w-fit ${dbStatus === 'connected' ? 'bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400' :
+              dbStatus === 'disconnected' ? 'bg-amber-50 dark:bg-amber-950/30 text-amber-600 dark:text-amber-400' :
+                'bg-blue-50 dark:bg-blue-950/30 text-blue-600 dark:text-blue-400'
+              }`}>
+              {dbStatus === 'connected' && <CheckCircle2 size={14} />}
+              {dbStatus === 'disconnected' && <AlertCircle size={14} />}
+              {dbStatus === 'checking' && <Loader2 size={14} className="animate-spin" />}
+              {dbStatus === 'connected' ? 'Database Connected' : dbStatus === 'disconnected' ? 'Using Local Storage' : 'Checking connection...'}
+            </div>
+            {dbStatus === 'disconnected' && (
+              <p className="text-[10px] text-slate-400 font-medium px-1">
+                Note: Firebase is offline. Data will be saved locally. <br />
+                Recent config change? <button onClick={() => window.location.reload()} className="underline hover:text-indigo-500">Reload</button>
+              </p>
+            )}
           </div>
 
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">

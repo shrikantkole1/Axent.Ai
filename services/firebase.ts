@@ -23,15 +23,26 @@ let app;
 let isMock = false;
 
 try {
+  console.log("Axent AI: Initializing Firebase...");
+  console.log("Config Check:", {
+    hasKey: !!firebaseConfig.apiKey,
+    keyLength: firebaseConfig.apiKey?.length,
+    projectId: firebaseConfig.projectId
+  });
+
   if (firebaseConfig.apiKey && typeof firebaseConfig.apiKey === 'string' && firebaseConfig.apiKey.length > 5) {
     app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
     // Verification check - if this fails, we switch to mock mode
     const authInstance = getAuth(app);
-    if (!authInstance) throw new Error("Auth initialization failed");
+    if (!authInstance) throw new Error("Auth initialization failed - getAuth returned null");
+
+    console.log("Axent AI: Firebase initialized successfully");
   } else {
-    throw new Error("Missing or invalid API Key for Firebase initialization");
+    throw new Error("Missing or invalid API Key for Firebase initialization. Check .env.local");
   }
 } catch (error) {
+  console.error("Axent AI: Firebase Initialization Error:", error);
   console.warn("Axent AI: Firebase Auth restricted or invalid. Using Local-First Storage mode.");
   isMock = true;
   app = { name: "[MOCK_APP]" } as any;
