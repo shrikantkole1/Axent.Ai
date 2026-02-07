@@ -1,108 +1,120 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+
+# ⚡ AxentAI  
+### Intelligent Study Assistant for Engineering Students  
+
+🚀 **Live App:** https://axent-ai.vercel.app/
+
+Adaptive AI-powered planning that helps engineering students study smarter, stay consistent, and avoid last-minute stress.
+
 </div>
 
-# Axent AI - Intelligent Study Planner
+---
 
-Axent AI is an advanced, AI-powered study planning application designed specifically for engineering students to master their curriculum through adaptive schedules, personalized roadmaps, and intelligent tutoring.
+## 🧠 What is AxentAI?
 
-<div align="center">
-🔗 <strong>Live Demo:</strong> https://axent-ai.vercel.app/
-</div>
+| | |
+|---|---|
+| Purpose | AI study companion for engineering students |
+| Core Idea | Replace static timetables with adaptive study plans |
+| Experience | Clear roadmaps, smart schedules, real guidance |
 
-View your app in AI Studio: https://ai.studio/apps/drive/17XuP-QIYV48R6Nlobs15oKLOkXgBO7jH
+AxentAI creates **personalized study roadmaps** that evolve with your **progress, exams, deadlines, and energy levels**.
+
+---
+
+## 💡 Problems → Solutions
+
+| Problem Students Face | How AxentAI Solves It |
+|----------------------|----------------------|
+| Overwhelming syllabus | Branch-specific curriculum roadmaps |
+| Poor time management | Adaptive study planning based on deadlines & energy |
+| No clear guidance | AI tutor + weak area detection |
+| No progress visibility | Confidence scoring & readiness analytics |
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|------|-------------|
+| 🧠 Adaptive Study Planner | Weekly schedules based on difficulty, exams, and availability |
+| 💬 AI Tutor | Ask doubts, generate plans, get topic explanations |
+| 🗺️ Visual Roadmap | Kanban-style tracking: Backlog → In Progress → Mastered |
+| 📊 Smart Analytics | See time distribution and weak areas clearly |
+| 👤 Personalization | Morning/Night study preferences, exam countdowns |
+
+---
+
+## 🧠 AI Architecture (Hybrid)
+
+| AI System | Role |
+|--------|------|
+| **Google Gemini (1.5 Flash)** | Conversational tutor, deep technical Q&A, personas |
+| **Tambo AI** | Roadmap generation, adaptive planning logic, summaries |
+
+This hybrid setup keeps **planning structured** and **conversations natural**.
 
 ---
 
 ## 🚀 Tech Stack
 
-### Frontend Core
-- **Framework:** React 19 (TypeScript)
-- **Build Tool:** Vite
-- **Routing:** React Router v6
-- **State Management:** React Context API
+### Frontend
+| Tool | Use |
+|----|----|
+| React 19 | UI framework |
+| TypeScript | Type safety |
+| Vite | Fast builds |
+| Tailwind CSS | Styling |
+| Framer Motion | Animations |
+| Lucide React | Icons |
 
-### Styling & UI
-- **Styling:** Tailwind CSS (Utility-first architecture)
-- **Animations:** Framer Motion (Complex transitions & micro-interactions)
-- **Icons:** Lucide React
-- **Components:** Custom premium UI components (Glassmorphism, Modern Cards)
-
-### Features & Visualization
-- **Charts:** Recharts (Analytics & Progress tracking)
-- **Calendar:** FullCalendar (Visual scheduling)
-- **PDF Generation:** jsPDF & autoTable (Report exports)
-- **Validation:** Zod (Schema validation)
-
-### Backend & Services
-- **Authentication & Database:** Firebase v12
-- **AI Services:** 
-  - Google Gemini API (`@google/genai`)
-  - Tambo AI (`@tambo-ai/react`)
+### Backend & Tools
+| Tool | Use |
+|----|----|
+| Firebase v12 | Auth & data |
+| Google Gemini API | AI tutoring |
+| Tambo AI | Planning & roadmaps |
+| Recharts | Analytics |
+| FullCalendar | Study planner |
+| jsPDF | Exports |
 
 ---
 
-## 💡 Problems Solved
+## 📅 How It Feels to Use
 
-Axent AI addresses the critical challenges faced by engineering students in managing their academic workload:
-
-1.  **Overwhelming Curriculum** 
-    *   *Problem:* Engineering syllabi are vast and unstructured, leading to confusion about where to start.
-    *   *Solution:* **Branch-Specific Roadmaps** automatically decompose complex subjects into manageable, ordered topics (e.g., breaking "Data Structures" into "Arrays", "Linked Lists", etc.).
-
-2.  **Inefficient Time Management**
-    *   *Problem:* Students struggle to balance multiple subjects and often cram before exams.
-    *   *Solution:* **Adaptive Study Planning** generates personalized daily schedules based on student energy levels (Morning/Night), available hours, and exam deadlines.
-
-3.  **Lack of Personalized Guidance**
-    *   *Problem:* Generic rote learning doesn't address individual weak points.
-    *   *Solution:* **Weakness Detection & Confidence Scoring** identifies struggling areas and prioritizes them in the study queue.
-
-4.  **Study Resource Fragmentation**
-    *   *Problem:* Wasting time searching for "what to study" within a topic.
-    *   *Solution:* **Instant Topic Tutors** provide immediate, AI-generated summaries, key sub-concepts, and time allocation strategies for every single topic.
-
-5.  **Performance Tracking**
-    *   *Problem:* Hard to gauge actual "exam readiness" until it's too late.
-    *   *Solution:* **Visual Analytics** track completion rates, confidence growth, and overall readiness scores in real-time.
+| Step | Experience |
+|----|-----------|
+| 1 | Enter subjects, exams, and availability |
+| 2 | AxentAI builds your roadmap |
+| 3 | Weekly plan adapts automatically |
+| 4 | Chat with AI anytime |
+| 5 | Track progress visually |
 
 ---
 
-## 🧠 AI Architecture
+## 🎯 Why AxentAI?
 
-Axent AI employs a hybrid AI strategy to deliver the best results:
-
-### 1. Google Gemini (`gemini-1.5-flash`)
-**Role:** The "Brain" of the Chatbot.
-- Powers the **Axent Assistant** (the floating chat interface).
-- Handles complex technical queries (e.g., "Explain how a red-black tree rebalances").
-- Supports **Persona-based Tutoring** (switching between "Socratic Tutor", "Strict Examiner", etc.).
-- Maintains context of the user's branch and current active subjects.
-
-### 2. Tambo AI
-**Role:** The "Architect" of Structure.
-- **Roadmap Generation:** Generates structured JSON data for subjects and topics.
-- **Adaptive Planning:** Analyzes student constraints to build the logic for the study schedule.
-- **Topic Details:** Generates concise 3-sentence summaries and key concepts for topic cards.
-
+| Traditional Planners | AxentAI |
+|--------------------|---------|
+| Static schedules | Adaptive & evolving |
+| Equal subject time | Priority-based |
+| No guidance | AI-driven clarity |
+| Last-minute stress | Front-loaded learning |
 
 ---
 
-## Run Locally
+## 🏁 Final Note
 
-**Prerequisites:**  Node.js
+AxentAI isn’t just a planner —  
+it’s a **learning companion that thinks with you**.
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Built for real engineering students and real academic pressure.
 
-2. **Configure Environment:**
-   Create `.env.local` by copying `.env.example` and adding your keys:
-   - `VITE_GEMINI_API_KEY` – [Get from Google AI Studio](https://aistudio.google.com/apikey) (Required for Chatbot)
-   - `VITE_TAMBO_API_KEY` – [Get from Tambo AI](https://tambo.co/dashboard) (Required for Roadmaps & Planning)
+---
 
-3. **Run the app:**
-   ```bash
-   npm run dev
-   ```
+<div align="center">
+
+### ⚡ AxentAI — Clarity for Complex Curricula
+
+</div>
