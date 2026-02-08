@@ -291,8 +291,10 @@ export const getTopicDetails = async (topicTitle: string, subjectTitle: string):
   }
 };
 
+
+
 /**
- * General purpose AI content generation
+ * General purpose AI content generation using Tambo Intelligence
  * @param prompt - The prompt text to send to the AI
  * @returns Generated text response
  */
@@ -316,7 +318,7 @@ export const generateContent = async (prompt: string): Promise<string> => {
 
     return await parseStreamResponse(stream);
   } catch (error) {
-    console.error("Content Generation Failed:", error);
+    console.error("Tambo Content Generation Failed:", error);
     return "AI service temporarily unavailable.";
   }
 };
